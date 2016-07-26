@@ -1,0 +1,33 @@
+{
+  "apps":
+  {
+    "name": "p2p-node",
+    "cwd": "/opt/web/wwwroot/nodejs/p2p",
+    "script": "./bin/www",
+    "exec_interpreter": "node",
+    "min_uptime": "60s",
+    "max_restarts": 30,
+    "exec_mode" : "cluster",
+    "error_file" : "./logs/test-err.log",
+    "out_file": "./logs/test-out.log",
+    "pid_file": "./logs/test.pid",
+    "watch": true,
+    "env":	{"NODE_ENV": "production", "PORT": "8011"}
+  },
+  "deploy" : {
+    "production" : {
+      "user" : "node",
+      "host" : ["localhost"],
+      "ref"  : "origin/master",
+      "repo" : "git@github.com:repo.git",
+      "path" : "/opt/web/wwwroot/nodejs/p2p",
+      "ssh_options": "StrictHostKeyChecking=no",
+      "pre-deploy-local" : "echo 'This is a local executed command'",
+      "post-deploy" : "npm install && pm2 startOrRestart pm2.json --env production",
+      "env"  : {
+        "NODE_ENV": "production",
+        "PORT":8011
+      }
+    }
+  }
+}

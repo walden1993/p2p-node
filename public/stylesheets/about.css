@@ -1,0 +1,49 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    height: 100%;
+}
+
+#page1 {
+    background: url(../images/about/page1_bg.jpg) center no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+#page1 .content {
+    padding:30px;
+}
+
+#page2 {
+    background: url(../images/about/page2_bg.jpg) center no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+#page3 {
+    background: url(../images/about/page1_bg.jpg) center no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+#page4 {
+    background: url(../images/about/page1_bg.jpg) center no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+#page5 {
+    background: url(../images/about/page1_bg.jpg) center no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+#page6 {
+    background: url(../images/about/page1_bg.jpg) center no-repeat;
+    background-size: cover;
+    height: 100%;
+}

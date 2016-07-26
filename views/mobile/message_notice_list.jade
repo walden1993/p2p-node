@@ -1,0 +1,6 @@
+each message in messages
+    li.list-group-item
+        h3.list-group-item-heading #{message.message_title}
+        div.list-group-item-text !{message.message_content}
+        p.list-group-item-text.text-right 发布日期：!{message.message_date}
+

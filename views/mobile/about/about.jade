@@ -1,0 +1,47 @@
+doctype html
+html.no-js(lang='zh-cn')
+    head
+        title #{title}
+        include ../../../views/command/meta
+        meta(name="keywords" content="深圳市易付通金融信息技术有限公司，三好资本，深圳华融金融集团" )
+        meta(name="format-detection" content="telephone=no")
+        meta(name="format-detection" content="email=no")
+        link(rel="stylesheet" type="text/css" href="../fullPage/css/reset.css")
+        link(rel="stylesheet" type="text/css" href="../fullPage/css/animations.css")
+        link(rel="stylesheet" type="text/css" href="../fullPage/css/layout.css")
+        link(rel="stylesheet" type="text/css" href="../fullPage/css/page.css")
+    body
+        div#page-hd
+            div#loading(style="display:none")
+                div.spinner
+                    div#container1.spinner-container
+                        div.circle1
+                        div.circle2
+                        div.circle3
+                        div.circle4
+                    div#container2.spinner-container
+                        div.circle1
+                        div.circle2
+                        div.circle3
+                        div.circle4
+                    div#container3.spinner-container
+                        div.circle1
+                        div.circle2
+                        div.circle3
+                        div.circle4
+            img.arrow-down.pt-page-moveIconDown(src="fullPage/img/icon_down.png")
+            img.arrow-up.pt-page-moveIconUp(src="fullPage/img/icon_up.png")
+
+        div#page-content
+            div.page.page-1.page-current
+            div.page.page-2.hide
+            div.page.page-3.hide
+            div.page.page-4.hide
+            div.page.page-5.hide
+            div.page.page-6.hide
+
+        div#page-ft
+
+        script(type="text/javascript" src="../fullPage/js/zepto.min.js")
+        script(type="text/javascript" src="../fullPage/js/touch.js")
+        script(type="text/javascript" src="../fullPage/js/index.js")

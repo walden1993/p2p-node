@@ -1,0 +1,22 @@
+{
+  "name": "p2p",
+  "description": "",
+  "main": "",
+  "authors": [
+    "walden <940417907@qq.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "zui": "^1.4.0",
+    "angular": "^1.5.7"
+  }
+}
