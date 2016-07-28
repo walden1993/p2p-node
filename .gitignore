@@ -35,3 +35,5 @@ out
 logs/
 
 node_modules/
+
+bower_components/

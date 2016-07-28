@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "export NODE_ENV=production && export PORT=8011  && forever -w start ./bin/www",
+    "start": "export NODE_ENV=production && export PORT=8011  && pm2 start ./bin/www -i 4 -n p2p-node --watch",
     "stop": "forever stop ./bin/www",
     "test": "supervisor ./bin/www"
   },
