@@ -1,1 +1,15 @@
 "#p2p-node" 
+--------使用说明-------
+
+git clone https://github.com/walden1993/p2p-node.git
+
+
+npm install --save
+
+
+#dev测试
+npm test
+
+
+#pro生产
+npm start
