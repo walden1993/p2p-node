@@ -1,19 +1,18 @@
 /**
  * Created by Administrator on 2016/7/20.
  */
-var config = require('../src/config');
+var config = require('../src/config/config');
 var request = require('request-json');
 var safeUtil = require('../src/safeutil');
 var app = require('../app');
 var client = request.createClient(new config().api_base_url);
 var express = require('express');
-var response = require('../src/response')
+var response = require('../src/param/response')
 var router = express.Router();
 
 router.post("/",function(req,res,next){
     var page_size  = req.body.page_size || '5';
     var page_num = req.body.page_num || '1';
-    console.log(req.body)
     var params = {
         client_version:config.client_version,
         mobile_tel:'',

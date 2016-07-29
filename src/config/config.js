@@ -17,8 +17,8 @@ var api_base_url = 'http://localhost/sp2p_web/app/';
 }
 
 var urls ={
-    'get_message_list':'get_message_list.mht'//获取消息公告列表
-
+    'get_message_list':'get_message_list.mht',//获取消息公告列表
+    'login':'login'//登录
 };
 
 /**

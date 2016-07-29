@@ -1,3 +1,6 @@
+/**
+ * Created by Administrator on 2016/7/29.
+ */
 
 var CODE_ERROR ='01',CODE_SUCCESS='00',CODE_LOGIN='02';
 
