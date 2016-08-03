@@ -10,6 +10,8 @@ var users = require('./routes/users');
 var media = require('./src/media-news');
 var about = require('./src/about');
 
+var errorHandler = require('./src/error')
+
 var app = express();
 
 // view engine setup
@@ -31,13 +33,9 @@ app.use('/message',media);
 app.use('/about',about);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
-
 // error handlers
+app.use(errorHandler.notFound);
+app.use(errorHandler.error);
 
 // development error handler
 // will print stacktrace
