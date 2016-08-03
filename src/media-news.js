@@ -25,11 +25,11 @@ router.post("/",function(req,res,next){
     client.post(config.getUrl('get_message_list'),params,function (error, response, body) {
         if(error) return next(error);
         if(body.data.message_list){
-            res.render('mobile/message_notice_list.jade',{
+            res.render('mobile/message_notice_list',{
                 messages:body.data.message_list
             });
         }else{
-            res.render('mobile/message_notice_list.jade',{
+            res.render('mobile/message_notice_list',{
                 messages:{}
             });
         }
