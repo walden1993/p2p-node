@@ -9,6 +9,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var media = require('./src/media-news');
 var about = require('./src/about');
+var help_feedback = require('./src/help_feedback');
 
 var errorHandler = require('./src/error')
 
@@ -19,7 +20,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -31,6 +32,8 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/message',media);
 app.use('/about',about);
+app.use('/help',help_feedback);
+app.use('/feedback',help_feedback)
 
 // catch 404 and forward to error handler
 // error handlers

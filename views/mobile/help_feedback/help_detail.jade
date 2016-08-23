@@ -1,0 +1,56 @@
+doctype html
+html(lang='zh_cn')
+    head
+        title #{title}
+        include ./../../command/meta
+        link(rel="stylesheet" href="../zui/dist/css/zui.lite.min.css")
+
+        style.
+            html {
+                background: #EEE;
+            }
+            body{
+                font-size:14px !important;
+                font-family: "Helvetica Neue", Helvetica, Tahoma, Arial, 'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif !important;
+            }
+            img{
+                width:30px;margin-right:5px;display:block;
+            }
+            .feedback{
+                color: #b32020;
+                text-align: center;
+                width: 100%;
+                display: block;
+                padding: 30px 0;
+                cursor: pointer;
+            }
+            .content{
+                border-bottom: 1px dashed #e2e2e2;
+            }
+            .help-title{
+                padding-top: .77em;
+                padding-bottom: .3em;
+                padding-left: 15px;
+                padding-right: 15px;
+                color: #888;
+                font-size: 14px;
+                background: #eee;
+            }
+            .h6-title{
+                color: #000;
+                font-weight: 500;
+            }
+    body
+        div.help-title  问题类型
+        div.panel-group(id="help_list")
+            each help,index in list
+                div.content
+                    div.panel-heading(data-toggle="collapse" data-parent="#help_list" href="#id_#{index}")
+                        p.panel-title.h6-title !{help.question}
+                    div.panel-collapse.collapse(id="id_#{index}")
+                        div.panel-body !{help.anwer}
+
+        a(href="/feedback/add" class="feedback") 意见反馈
+
+        script(type="text/javascript" src="../jquery/dist/jquery.min.js")
+        script(type="text/javascript" src="../zui/dist/js/zui.lite.min.js")

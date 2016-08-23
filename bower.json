@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "zui": "^1.4.0",
-    "angular": "^1.5.7"
+    "angular": "^1.5.7",
+    "weui": "^0.4.3"
   }
 }

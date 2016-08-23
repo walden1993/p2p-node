@@ -13,12 +13,19 @@ var api_base_url = 'http://localhost/sp2p_web/app/';
         api_base_url = 'http://localhost:8080/sp2p_web/app/';
     }
     this.api_base_url = api_base_url;
+    this.api_test_url = 'http://119.147.208.220:8080/test/app/'
     return this;
 }
 
 var urls ={
     'get_message_list':'get_message_list.mht',//获取消息公告列表
-    'login':'login'//登录
+    'login':'login.mht',//登录
+    'get_recharge_code':'get_recharge_code.mht'//获取短信验证码
+    ,'recharge':'recharge.mht',//充值
+    'get_user_info':'get_user_info.mht',//获取用户信息
+    'get_investment_record':'get_investment_record.mht'//获取投资记录
+    ,'get_user_friends':'get_user_friends.mht'//获取邀请好友列表
+    ,'callcenterAnswer':'callcenterAnswer.mht'//常见问题列表
 };
 
 /**
