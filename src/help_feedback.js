@@ -20,7 +20,28 @@ router.get('/add',function(req,res,next){
 });
 
 router.post('/add',function(req,res,next){
+    var content = req.body.content;
+    var mobile = req.body.mobile;
+    let params = {
+        mobile_system:'pc',
+        client_version:config.client_version,
+        mobile_tel:mobile,
+        feedback_content:content
+    };
 
+    if (!content){
+        res.render('mobile/help_feedback/feedback',{title:'意见反馈'});
+        return;
+    }
+
+    var sign = safeUtil.paramsEncrypt(params);
+    params['sign'] = sign;
+    client.post(config.getUrl('put_feedback'),params,function(error,response,body){
+        if (error) return next(error);
+        else{
+            res.render('mobile/help_feedback/feedback_add_result',{title:'意见反馈结果'});
+        }
+    })
 });
 
 router.get('/help_detail',function(req,res,next){

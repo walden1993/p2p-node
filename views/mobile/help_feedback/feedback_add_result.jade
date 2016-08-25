@@ -1,0 +1,24 @@
+doctype html
+html(lang='zh_cn')
+    head
+        title #{title}
+        include ./../../command/meta
+        link(rel="stylesheet" href="../weui/dist/style/weui.min.css")
+        style.
+            html {
+                background: #EEE;
+            }
+            body{
+                font-size:14px !important;
+                font-family: "Helvetica Neue", Helvetica, Tahoma, Arial, 'Microsoft Yahei', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif !important;
+            }
+    body
+        div.msg
+            div.weui_msg
+                div.weui_icon_area
+                    i.weui_icon_success.weui_icon_msg
+                div.weui_text_area
+                    h2.weui_msg_title 操作成功
+                    p.weui_msg_desc 感谢您提出的宝贵意见!
+                div.weui_opr_area
+

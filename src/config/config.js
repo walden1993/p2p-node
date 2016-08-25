@@ -26,6 +26,7 @@ var urls ={
     'get_investment_record':'get_investment_record.mht'//获取投资记录
     ,'get_user_friends':'get_user_friends.mht'//获取邀请好友列表
     ,'callcenterAnswer':'callcenterAnswer.mht'//常见问题列表
+    ,'put_feedback':'put_feedback.mht'//添加意见反馈
 };
 
 /**
@@ -35,7 +36,7 @@ var urls ={
  */
 exports.getUrl = function (METHOD_NAME) {
     var url = urls[METHOD_NAME];
-    return api_base_url.concat(url);
+    return url;
 };
 
 exports.client_version = '12';

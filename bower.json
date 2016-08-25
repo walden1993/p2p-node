@@ -18,6 +18,7 @@
   "dependencies": {
     "zui": "^1.4.0",
     "angular": "^1.5.7",
-    "weui": "^0.4.3"
+    "weui": "^0.4.3",
+    "bootstrap": "^3.3.7"
   }
 }

@@ -15,21 +15,39 @@ html(lang='zh_cn')
             img{
                 width:30px;margin-right:5px;display:block;
             }
-            .feedback{
-                color: #b32020;
-                text-align: center;
-                width: 100%;
-                display: block;
-                margin-top: 30px;
-                cursor: pointer;
+
+            .max_msg{
+                top: -30px;
+                left: 80%;
+                position: relative;
+                color: #949494;
             }
+        script(type="text/javascript" src="../jquery/dist/jquery.min.js")
+        script.
+            //多行文本输入框剩余字数计算
+            function checkMaxInput(obj, maxLen) {
+                if (obj == null || obj == undefined || obj == "") {
+                    return;
+                }
+                if (maxLen == null || maxLen == undefined || maxLen == "") {
+                    maxLen = 100;
+                }
+
+                $('.max_msg').html((maxLen - obj.value.length)+'/'+maxLen)
+            }
+
     body
         div.weui_cells_title  问题和意见
+        form(method="post" action="add")
+            div
+                textarea.weui_textarea(placeholder="请输入您的问题和意见" id="content" required name="content" rows=6  maxlength=200 onkeydown="checkMaxInput(this,200)"
+                onkeyup="checkMaxInput(this,200)" )
+                span.max_msg 200/200
+            div.weui_cells_title  联系电话
 
-        textarea.weui_textarea(placeholder="请输入您的问题和意见" name="" rows=6)
+            div(style="background: white;height: 35px;line-height: 35px;")
+                input.weui_input(placeholder="选填，便于我们与您联系" type="tel" id="mobile" name="mobile" )
 
-        div.weui_cells_title  联系电话
+            button.weui_btn.weui_btn_warn(style="margin:25px 0") 确认
 
-        input.weui_input(placeholder="选填，便于我们与你联系" type="Number" name="" )
-
-        a.weui_btn.weui_btn_warn( href="javascript:;") 确认
+         a.weui_btn.weui_btn_default( href="/help" style="margin:25px 0") 返回

@@ -4,7 +4,7 @@
 var config = require('../src/config/config');
 var request = require('request-json');
 var safeUtil = require('../src/safeutil');
-var client = request.createClient(new config().api_test_url);
+var client = request.createClient(new config().api_base_url);
 var express = require('express');
 var response = require('../src/param/response');
 var assert = require('assert');
@@ -57,14 +57,14 @@ function login(fn) {
     client.post(config.getUrl('login'),params,function (error, response, body) {
         if(error) return assert.fail();
         console.log(body.data)
-        if(body.data.token){
+        if(body.data){
             if (typeof fn === "function"){
                 fn(body.data.token);
             }else{
                 console.log(body.data);
             }
         }else{
-            console.log(body.data);
+            console.log(body);
         }
     })
 }
