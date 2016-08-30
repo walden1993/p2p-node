@@ -4,7 +4,7 @@
 var config = require('../src/config/config');
 var request = require('request-json');
 var safeUtil = require('../src/safeutil');
-var client = request.createClient(new config().api_base_url);
+var client = request.createClient(new config().api_pro_url);
 var express = require('express');
 var response = require('../src/param/response');
 var assert = require('assert');
@@ -48,7 +48,7 @@ function login(fn) {
     let params = {
         mobile_system:'pc',
         client_version:config.client_version,
-        mobile_tel:'13987654321',
+        mobile_tel:'13000000013',
         login_pwd:'123456'
     };
 
@@ -151,8 +151,19 @@ function callcenterAnswer(){
     })
 }
 
-login(null);
+function new_pro_general(){
+    let params = {
+        mobile_system:'pc',
+        client_version:config.client_version,
+    };
+    var sign = safeUtil.paramsEncrypt(params);
+    params['sign'] = sign;
+    client.post(config.getUrl('new_pro_general'),params,function(error,response,body){
+        console.log(body);
+    })
+}
 
+new_pro_general()
 
 let fs = require('fs');
 let path = require('path');

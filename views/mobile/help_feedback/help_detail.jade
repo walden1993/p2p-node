@@ -30,9 +30,6 @@ html(lang='zh_cn')
                 cursor: pointer;
             }
 
-            .content {
-                border-bottom: 1px dashed #e2e2e2;
-            }
 
             .help-title {
                 padding-top: .77em;
@@ -44,10 +41,7 @@ html(lang='zh_cn')
                 background: #eee;
             }
 
-            .h6-title {
-                color: #000;
-                font-weight: 500;
-            }
+
     body
         div.help-title  问题类型
         div.panel-group(id="help_list" role="tablist" aria-multiselectable="true")
@@ -55,7 +49,7 @@ html(lang='zh_cn')
                 div.panel(style="border-bottom:1px #d8d8d8 dashed")
                     div.panel-heading(role="tab" id="title_#{index}")
                         p.panel-title
-                            span(role="button" style="display:block;" data-toggle="collapse" data-parent="#accordion" href="#id_#{index}" aria-expanded="true" aria-controls="collapseOne") !{help.question}
+                            span(role="button" style="display:block;" data-toggle="collapse" data-parent="#accordion" href="#id_#{index}" aria-expanded="true" aria-controls="collapseOne") #{index+1}、!{help.question}
                     div.panel-collapse.collapse(id="id_#{index}" role="tabpanel" aria-labelledby="headingOne")
                         div.panel-body !{help.anwer}
 

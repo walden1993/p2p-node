@@ -1,0 +1,322 @@
+doctype html
+html(lang='zh_cn')
+    head
+        title #{title}
+        include ./../command/meta
+        link(href="../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"  )
+        style.
+            body{
+                color: #848484 !important;
+            }
+            .main{
+                background: url("images/operative/bg.jpg") repeat;
+                padding:20px;
+            }
+            .total{
+                margin-bottom: 30px;
+                background: white;
+            }
+            .title{
+                display: block;
+                height: 40px;
+                line-height: 40px;
+                background-color: #fb4d40;
+                color:white;
+                padding:0 10px;
+            }
+            .title .t-left{
+                float: left;
+            }
+            .title .t-right{
+                float:right;
+            }
+            .total table{
+                width:100%;
+            }
+
+            .total table tr td{
+                padding: 10px;
+                height:15px;
+                line-height: 15px;
+            }
+
+            .total table tr td p{
+                font-size:13px;
+            }
+
+            .total table tr td span {
+                color:#fb4d40;
+                font-size:15px;
+                font-weight: 600;
+            }
+            .main .over{
+                display: block;
+                line-height: 30px;
+                height: 30px;
+                font-weight:700;
+                color: #0d0d0d;
+                text-align: center;
+            }
+            .t-top{
+                text-align: center;
+                background:url('images/operative/yy_title.png') center  no-repeat;
+                background-size: contain;
+                height: 185px;
+                line-height: 245px;
+                font-weight: 600;
+                color: #0d0d0d;
+            }
+    body
+        include ./../command/loading
+        div.main
+            div.t-top 2016/8
+            div
+                span.over 数据统计时间截至2016年8月25日
+            div.total
+                div.title
+                    span.t-left 总成交数据(单位：万元)
+                    span.t-right
+                div
+                    table.table-bordered
+                        tr
+                            td
+                                p 累计成交
+                                span 26413
+                            td
+                                p 累计收益
+                                span 555.05
+                        tr
+                            td
+                                p 已支付投资人本金
+                                span 24193
+                            td
+                                p 已支付投资人利息
+                                span 535.00
+
+            div.total
+                div.title
+                    span.t-left 总数据(单位：万元)
+                    span.t-right
+                div
+                    table.table-bordered
+                        tr
+                            td
+                                p 累计统计
+                            td
+                                p 交易总额
+                            td
+                                p 待还总额
+                            td
+                                p 注册用户(人)
+                        tr
+                            td
+                                p 七月份数据
+                            td
+                                span 26413
+                            td
+                                span 2110
+                            td
+                                span 19112
+                        tr
+                            td
+                                p 六月份数据
+                            td
+                                span 24294
+                            td
+                                span 1782
+                            td
+                                span 18827
+            div.total
+                div.title
+                    span.t-left 七月份各标成交数据(单位：万元)
+                    span.t-right
+                div
+                    table.table-bordered
+                        tr
+                            td
+                                p 月标分类
+                            td
+                                p 一月标
+                            td
+                                p 三月标
+                            td
+                                p 六月标
+                        tr
+                            td
+                                p 成交额
+                            td
+                                span 1604
+                            td
+                                span 250
+                            td
+                                span 0
+            div.total
+                div.title
+                    span.t-left 近两个月交易数据对比(单位：万元)
+                    span.t-right
+                div
+                    table.table-bordered
+                        tr
+                            td
+                                p 月份
+                            td
+                                p 交易额
+                            td
+                                p 充值额
+                            td
+                                p 提现额
+                        tr
+                            td
+                                p 七月份
+                            td
+                                span 1854
+                            td
+                                span 2407
+                            td
+                                span 301
+                        tr
+                            td
+                                p 六月份
+                            td
+                                span 1614
+                            td
+                                span 2107
+                            td
+                                span 340
+            div.total(style="display:none")
+                div.title
+                    span.t-left 近六个月成交数据(单位：万元)
+                    span.t-right
+                div
+                    table.table-bordered
+                        tr
+                            td
+                                p 月份
+                            td
+                                p 交易额
+                            td
+                                p 还款额
+                        tr
+                            td
+                                p 2016-02
+                            td
+                                span 893.65
+                            td
+                                span 1161
+                        tr
+                            td
+                                p 2016-03
+                            td
+                                span 966.87
+                            td
+                                span 1097
+                        tr
+                            td
+                                p 2016-04
+                            td
+                                span 1134.62
+                            td
+                                span 2256
+                        tr
+                            td
+                                p 2016-05
+                            td
+                                span 1574
+                            td
+                                span 1654
+                        tr
+                            td
+                                p 2016-06
+                            td
+                                span 1614
+                            td
+                                span 1656
+                        tr
+                            td
+                                p 2016-07
+                            td
+                                span 1854
+                            td
+                                span 1641
+
+            div.total(style="background:none;margin-top: 180px;")
+                div.title(style="background:url(images/operative/yy_title02.png) center no-repeat;height:92px;text-align:center;line-height: 125px;font-size: 18px;font-weight: 600") 七月投资风云榜(单位：万元)
+                div(style="background:white;")
+                    table.table-bordered
+                        tr
+                            td
+                                p 名次
+                            td
+                                p 七月份投资额度
+                            td
+                                p 总投资额度
+                        tr
+                            td
+                                p 第一名
+                            td
+                                span 210
+                            td
+                                span 1269
+                        tr
+                            td
+                                p 第二名
+                            td
+                                span 157
+                            td
+                                span 944
+                        tr
+                            td
+                                p 第三名
+                            td
+                                span 111
+                            td
+                                span 843
+                        tr
+                            td
+                                p 第四名
+                            td
+                                span 89
+                            td
+                                span 828
+                        tr
+                            td
+                                p 第五名
+                            td
+                                span 73
+                            td
+                                span 825
+                        tr
+                            td
+                                p 第六名
+                            td
+                                span 66
+                            td
+                                span 796
+                        tr
+                            td
+                                p 第七名
+                            td
+                                span 64
+                            td
+                                span 764
+                        tr
+                            td
+                                p 第八名
+                            td
+                                span 63
+                            td
+                                span 568
+                        tr
+                            td
+                                p 第九名
+                            td
+                                span 60
+                            td
+                                span 553
+                        tr
+                            td
+                                p 第十名
+                            td
+                                span 51
+                            td
+                                span 538

@@ -8,3 +8,10 @@ meta(name="full-screen" content="yes")
 meta(name="x5-fullscreen" content="true")
 <!--苹果全屏-->
 meta(meta name="apple-mobile-web-app-capable" content="yes" )
+link(rel="stylesheet" href="../weui/dist/style/weui.min.css")
+script.
+    document.onreadystatechange = function(){
+        if(document.readyState==='complete'){
+            document.getElementById('loadingToast').style.display='none';
+        }
+    }

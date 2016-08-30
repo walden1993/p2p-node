@@ -5,15 +5,17 @@ module.exports = exports = config;
 
 var api_base_url = 'http://localhost/sp2p_web/app/';
 
+
  function config () {
     var env = process.env.NODE_ENV || 'DEV';
     if (env=='DEV'){//开发
         api_base_url = 'http://localhost/sp2p_web/app/';
     }else {//生产
-        api_base_url = 'http://localhost:8080/sp2p_web/app/';
+        api_base_url = 'http://localhost:8081/app/';
     }
     this.api_base_url = api_base_url;
     this.api_test_url = 'http://119.147.208.220:8080/test/app/'
+    this.api_pro_url ="https://www.sanhaodai.com/app/";
     return this;
 }
 
@@ -27,6 +29,7 @@ var urls ={
     ,'get_user_friends':'get_user_friends.mht'//获取邀请好友列表
     ,'callcenterAnswer':'callcenterAnswer.mht'//常见问题列表
     ,'put_feedback':'put_feedback.mht'//添加意见反馈
+    ,'new_pro_general':'new_pro_general.mht'//新手标
 };
 
 /**

@@ -26,6 +26,16 @@
 
     <style id="table">
 
+        table tr td:first-child{display: none}
+        table tr td:nth-child(2){
+            width: 40%;
+        }
+        table tr td:nth-child(3){
+             display: none;
+         }
+        table tr td:nth-child(6){
+            display: none;
+        }
         table.noBorderTable td, table.noBorderTable th, table.noBorderTable caption {
             border: 1px dashed #ddd !important
         }
@@ -73,7 +83,7 @@
 
 </head>
 <body class="view" contenteditable="true" spellcheck="false" style=" cursor: text;">
-<table width="755">
+<table width="100%">
     <colgroup>
         <col width="46" style=";width:47px">
         <col width="171" style=";width:171px">

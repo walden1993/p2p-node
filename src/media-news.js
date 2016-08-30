@@ -7,7 +7,7 @@ var safeUtil = require('../src/safeutil');
 var app = require('../app');
 var client = request.createClient(new config().api_base_url);
 var express = require('express');
-var response = require('../src/param/response')
+var response = require('../src/param/response');
 var router = express.Router();
 
 router.post("/",function(req,res,next){
@@ -42,5 +42,8 @@ router.get("/",function(req,res,next){
         title:'消息列表'
     });
 });
+
+
+
 
 module.exports = router;
